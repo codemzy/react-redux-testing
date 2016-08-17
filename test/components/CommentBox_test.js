@@ -3,7 +3,12 @@ import CommentBox from '../../src/components/CommentBox.js';
 
 describe('CommentBox', () => {
     
-    let component = renderComponent(CommentBox);
+    let component;
+    
+    beforeEach(() => {
+        component = renderComponent(CommentBox);
+    });
+  
     it('Has the class comment-box', () => {
         expect(component).to.have.class('comment-box');
     });
