@@ -29,8 +29,9 @@ class CommentBox extends React.Component {
     render() {
         return (
             <form onSubmit={this._handleSubmit.bind(this)} className="comment-box">
-                <textarea value={this.state.comment} onChange={this._handleChange.bind(this)} />
-                <button action="submit">Submit Comment</button>
+                <h4>Add a comment</h4>
+                <textarea className="form-control" value={this.state.comment} onChange={this._handleChange.bind(this)} />
+                <button className="btn btn-success" action="submit">Submit Comment</button>
             </form>
         );
     }
