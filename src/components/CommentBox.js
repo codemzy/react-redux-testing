@@ -14,12 +14,19 @@ class CommentBox extends React.Component {
         });
     }
     
+    _handleSubmit(event) {
+        event.preventDefault();
+        this.setState({
+            comment: ''
+        });
+    }
+    
     render() {
         return (
-            <div className="comment-box">
+            <form onSubmit={this._handleSubmit.bind(this)} className="comment-box">
                 <textarea value={this.state.comment} onChange={this._handleChange.bind(this)} />
-                <button>Submit Comment</button>
-            </div>
+                <button action="submit">Submit Comment</button>
+            </form>
         );
     }
 }

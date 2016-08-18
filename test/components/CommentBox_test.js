@@ -27,7 +27,8 @@ describe('CommentBox', () => {
             expect(component.find('textarea')).to.have.value('new comment');
         });
         it('clears the input when submitted', () => {
-            
+            component.simulate('submit');
+            expect(component.find('textarea')).to.have.value('');
         });
     });
     
